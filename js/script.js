@@ -1,6 +1,16 @@
+/* global $*/
+
+//let performLogic;
+
+let currentUser;
+
+function performLogic(but,til) {
+    
+    
+}
 
 $("#button1").click( function() {
-    performLogic("#button2","#tile2");
+    performLogic("#button1","#tile1");
 });
 
 $("#button2").click( function() {
