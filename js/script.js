@@ -2,7 +2,7 @@
 
 //let performLogic;
 
-let currentUser;
+let currentUser="test";
 
 function performLogic(buttonId,tileId) {
     $(buttonId).hide();
