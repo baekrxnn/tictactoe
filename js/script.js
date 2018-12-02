@@ -4,8 +4,9 @@
 
 let currentUser;
 
-function performLogic(but,til) {
-    
+function performLogic(buttonId,tileId) {
+    $(buttonId).hide();
+    $(tileId).text(currentUser);
     
 }
 
