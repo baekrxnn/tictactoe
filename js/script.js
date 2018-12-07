@@ -2,12 +2,30 @@
 
 //let performLogic;
 
-let currentUser="test";
+let currentUser"x";
 
+let counter=0;
+    counter++;
+    
 function performLogic(buttonId,tileId) {
     $(buttonId).hide();
-    $(tileId).text(currentUser);
+    $(tileId).text(player);
     
+}
+
+function player() {
+    /*
+    if ((counter%2)===0) {
+        currentUser="o";
+        return currentUser;
+    } else {
+        currentUser="x";
+        return currentUser;
+    }
+    */
+    if (currentUser==="x") {
+        
+    }
 }
 
 $("#button1").click( function() {
