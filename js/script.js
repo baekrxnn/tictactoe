@@ -2,7 +2,7 @@
 
 //let performLogic;
 
-let currentUser"x";
+let currentUser="o";
 
 let counter=0;
     counter++;
@@ -23,9 +23,16 @@ function player() {
         return currentUser;
     }
     */
+    
+    
     if (currentUser==="x") {
-        
+        currentUser="o";
+        return currentUser;
+    } else if (currentUser==="o") {
+        currentUser="x";
+        return currentUser;
     }
+    
 }
 
 $("#button1").click( function() {
