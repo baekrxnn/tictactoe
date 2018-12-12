@@ -28,7 +28,7 @@ In this unit, coders will create the classic game of tic tac toe in their brower
 
 - [x] Implement behavior that will change the turns of the player. Do this by writing a function that will change the current player to either "X" or "O" depending on the current player. Decide where to put this function. 
 - [x] Create a variable that keeps track of the total number of turns taken
-- [ ] Implement behavior that will make the game Draw after 9 pieces are placed. Do this by writing a function that will add 1 to the current turns, and check if that counter has reached 9. 
+- [x] Implement behavior that will make the game Draw after 9 pieces are placed. Do this by writing a function that will add 1 to the current turns, and check if that counter has reached 9. 
 - [ ] Create a variable of boolean type that will signal whether or not the game has ended.
 - [ ] Implement behavior that will stop the game after a Draw occurs. Do this by changing your piece-placing function to check if the game has ended first before placing a piece.
 
