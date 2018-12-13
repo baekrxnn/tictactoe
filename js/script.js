@@ -36,11 +36,12 @@ function player() {
 }
 
 function turns() {
-    let numberOfTurns =counter++;
+    let numberOfTurns = counter++;
     console.log(numberOfTurns);
     if ((numberOfTurns)===9) {
         gameSet=true;
-        console.log(gameSet);
+        // console.log(gameSet);
+        return gameSet;
     } else {
         console.log(gameSet);
     }
