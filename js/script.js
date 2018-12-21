@@ -11,8 +11,9 @@ let gameSet=false;
 function performLogic(buttonId,tileId) {
     $(buttonId).hide();
     $(tileId).text(player);
-    check();
     turns();
+    check();
+    
 }
 
 function player() {
@@ -41,6 +42,8 @@ function turns() {
     console.log(numberOfTurns);
     if ((numberOfTurns)===9) {
         gameSet=true;
+        $("button").hide();
+        
         // console.log(gameSet);
         return gameSet;
     } else {
@@ -52,6 +55,13 @@ function check(tileA, tileB, tileC) {
     checkWins("#tile1","#tile2","#tile3");
     checkWins("#tile4","#tile5","#tile6");
     checkWins("#tile7","#tile8","#tile9");
+    
+    checkWins("#tile1","#tile4","#tile7");
+    checkWins("#tile2","#tile5","#tile8");
+    checkWins("#tile3","#tile6","#tile9");
+    
+    checkWins("#tile1","#tile5","#tile9");
+    checkWins("#tile3","#tile5","#tile7");
     
     //checkVerticalWins();
     //checkVerticalWins();
@@ -68,6 +78,9 @@ function checkWins(selectorA, selectorB, selectorC) {
     
     if (a===currentUser && b===currentUser && c===currentUser) {
         alert("win!");
+        gameSet=true;
+        $("h1").text("player "+ currentUser+ " wins!");
+        $("button").hide();
     }
     
     
