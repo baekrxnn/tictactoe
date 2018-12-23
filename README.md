@@ -43,7 +43,7 @@ In this unit, coders will create the classic game of tic tac toe in their brower
 - [x] Next, write a function checkHoritzontalWins that will call the function above on all of the horizontal combinations of tiles
 - [x] Next, write a function checkDiagonalWins that will call the function above on all of the diagonal combinations
 - [x] In each of the win functions, if the win condition is satisfied, set the end game variable to true, and change the title to "[Player] Wins!"
-- [ ] Determine the appropriate location to place the Win functions
+- [x] Determine the appropriate location to place the Win functions
 
 #### Wrap
 - [ ] Push your changes!

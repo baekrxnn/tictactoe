@@ -11,12 +11,17 @@ let gameSet=false;
 function performLogic(buttonId,tileId) {
     $(buttonId).hide();
     $(tileId).text(player);
+    if (currentUser==="x") {
+        $(tileId).css("color","blue");
+    } else {
+        $(tileId).css("color","purple");
+    }
     turns();
     check();
     
 }
 
-function player() {
+function player(tileId) {
     /*
     if ((counter%2)===0) {
         currentUser="o";
@@ -77,9 +82,10 @@ function checkWins(selectorA, selectorB, selectorC) {
     let c=$(selectorC).text();
     
     if (a===currentUser && b===currentUser && c===currentUser) {
-        alert("win!");
+        alert("player "+ currentUser+ " wins!");
         gameSet=true;
         $("h1").text("player "+ currentUser+ " wins!");
+        $("h1").css("color","red");
         $("button").hide();
     }
     
