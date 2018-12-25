@@ -12,9 +12,9 @@ function performLogic(buttonId,tileId) {
     $(buttonId).hide();
     $(tileId).text(player);
     if (currentUser==="x") {
-        $(tileId).css("color","blue");
+        $(tileId).css("color","gold");
     } else {
-        $(tileId).css("color","purple");
+        $(tileId).css("color","rebeccapurple");
     }
     turns();
     check();
@@ -47,9 +47,11 @@ function turns() {
     console.log(numberOfTurns);
     if ((numberOfTurns)===9) {
         gameSet=true;
+        console.log(gameSet);
         $("button").hide();
-        
-        // console.log(gameSet);
+        alert("draw!");
+        $("h1").text("Draw!");
+        $("h1").css("color","aquamarine");
         return gameSet;
     } else {
         console.log(gameSet);
@@ -57,23 +59,20 @@ function turns() {
 }
 
 function check(tileA, tileB, tileC) {
+    //horizontal wins
     checkWins("#tile1","#tile2","#tile3");
     checkWins("#tile4","#tile5","#tile6");
     checkWins("#tile7","#tile8","#tile9");
     
+    //vertical wins
     checkWins("#tile1","#tile4","#tile7");
     checkWins("#tile2","#tile5","#tile8");
     checkWins("#tile3","#tile6","#tile9");
     
+    //diagonal wins
     checkWins("#tile1","#tile5","#tile9");
     checkWins("#tile3","#tile5","#tile7");
     
-    //checkVerticalWins();
-    //checkVerticalWins();
-    //checkVerticalWins();
-    
-    //checkDiagonalWins();
-    //checkDiagonalWins();
 }
 
 function checkWins(selectorA, selectorB, selectorC) {
@@ -85,10 +84,9 @@ function checkWins(selectorA, selectorB, selectorC) {
         alert("player "+ currentUser+ " wins!");
         gameSet=true;
         $("h1").text("player "+ currentUser+ " wins!");
-        $("h1").css("color","red");
+        $("h1").css("color","salmon");
         $("button").hide();
     }
-    
     
 }
 
