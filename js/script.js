@@ -65,10 +65,16 @@ function turns() {
 }
 
 $("#restart").click(function() {
-    //$("div.tile").text("");
-    $("button").show();
+    //let piece= ($(".pieces"));
+    //$("div.tile").empty();
+    //$(".container").append(piece);
+    //$("#restart").hide();
+    //gameSet=false;
     
+    window.location.reload();
 });
+
+
 
 
 
