@@ -7,10 +7,13 @@ let currentUser="o";
 let counter=1;
 
 let gameSet=false;
-    
+
+$("#restart").hide();
+
 function performLogic(buttonId,tileId) {
     $(buttonId).hide();
     $(tileId).text(player);
+    
     if (currentUser==="x") {
         $(tileId).css("color","gold");
     } else {
@@ -19,6 +22,9 @@ function performLogic(buttonId,tileId) {
     turns();
     check();
     
+    if (gameSet===true){
+        $("#restart").show();
+    }
 }
 
 function player(tileId) {
@@ -57,6 +63,14 @@ function turns() {
         console.log(gameSet);
     }
 }
+
+$("#restart").click(function() {
+    //$("div.tile").text("");
+    $("button").show();
+    
+});
+
+
 
 function check(tileA, tileB, tileC) {
     //horizontal wins
