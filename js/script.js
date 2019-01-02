@@ -1,6 +1,5 @@
 /* global $*/
 
-//let performLogic;
 
 let currentUser="o";
 
@@ -10,6 +9,7 @@ let gameSet=false;
 
 $("#restart").hide();
 
+//main function of buttons
 function performLogic(buttonId,tileId) {
     $(buttonId).hide();
     $(tileId).text(player);
@@ -17,7 +17,7 @@ function performLogic(buttonId,tileId) {
     if (currentUser==="x") {
         $(tileId).css("color","gold");
     } else {
-        $(tileId).css("color","rebeccapurple");
+        $(tileId).css("color","#e689ff");
     }
     turns();
     check();
@@ -27,6 +27,7 @@ function performLogic(buttonId,tileId) {
     }
 }
 
+//assigns each player to its selected tile
 function player(tileId) {
     /*
     if ((counter%2)===0) {
@@ -45,9 +46,9 @@ function player(tileId) {
         currentUser="x";
         return currentUser;
     }
-    
 }
 
+//decide if the game ends because of draw
 function turns() {
     let numberOfTurns = counter++;
     console.log(numberOfTurns);
@@ -64,6 +65,7 @@ function turns() {
     }
 }
 
+// restart button's function
 $("#restart").click(function() {
     //let piece= ($(".pieces"));
     //$("div.tile").empty();
@@ -74,10 +76,7 @@ $("#restart").click(function() {
     window.location.reload();
 });
 
-
-
-
-
+// check the tiles for a win
 function check(tileA, tileB, tileC) {
     //horizontal wins
     checkWins("#tile1","#tile2","#tile3");
@@ -92,9 +91,9 @@ function check(tileA, tileB, tileC) {
     //diagonal wins
     checkWins("#tile1","#tile5","#tile9");
     checkWins("#tile3","#tile5","#tile7");
-    
 }
 
+// if a player wins, what happens is
 function checkWins(selectorA, selectorB, selectorC) {
     let a=$(selectorA).text();
     let b=$(selectorB).text();
@@ -107,9 +106,9 @@ function checkWins(selectorA, selectorB, selectorC) {
         $("h1").css("color","salmon");
         $("button").hide();
     }
-    
 }
 
+//buttonsss
 $("#button1").click( function() {
     performLogic("#button1","#tile1");
 });
